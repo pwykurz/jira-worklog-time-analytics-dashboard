@@ -1,0 +1,41 @@
+name: Bug report
+description: Something does not work as documented
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Do not paste secrets or real company data.** Remove tokens, `.env` contents, issue keys,
+        names and customer information from logs and screenshots before submitting.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you do, what did you expect, and what happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Sign in ...
+        2. Open "Time per issue" ...
+        3. ...
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version / commit
+      placeholder: e.g. 2.0.0 or a commit SHA
+  - type: input
+    id: node
+    attributes:
+      label: Node.js version and OS
+      placeholder: e.g. Node 22.11 on Ubuntu 24.04
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs (sanitised)
+      render: shell
